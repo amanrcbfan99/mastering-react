@@ -4,6 +4,9 @@
 
 export function Addition(){
   
+  function alertFun(){
+    alert("Button clicked")
+  }
   const studentObj = {
     Aman : "second Year",
     Ansh  : "First Year",
@@ -30,6 +33,7 @@ export function Addition(){
       <h1>Current class of aman : {studentObj.Aman } </h1>
       <h1>Current class of Pawan : {studentObj.Pawan}</h1>
       <h1>{friendCircle("Kartikeya", "Divyansh", "Chandan")}</h1>
+      <button onClick={alertFun} >Click Me</button>
     </div>
   )
 }
