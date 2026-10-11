@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 // import './index.css'
 // import App from './App.jsx'
-import {Profile, Settings, Feed } from './Header.jsx'
+// import {Profile, Settings, Feed } from './Header.jsx'
 import { Addition } from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

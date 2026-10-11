@@ -1,17 +1,6 @@
-export function Profile(){
-  return(
-    <h1>profile</h1>
-  )
-}
-
-export function Settings(){
+export function MyName({name}){
     return(
-        <h1>Settings</h1>
+        <h1>{name}</h1>
     )
-}
-
-export function Feed(){
-    return(
-        <h1>Feed</h1>
-    )
+    
 }

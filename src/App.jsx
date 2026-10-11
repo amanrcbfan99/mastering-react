@@ -1,17 +1,18 @@
 import { useState } from "react"
+import { MyName } from "./Header"
 
 export function Addition(){
-  
-  const [name , updateName] = useState(true)
+  console.log("test")
+  // const [name , updateName] = useState(true)
 
-  function toggleFun(){
-    if(name === true){
-      return updateName(false)
-    } if(name === false){
-      return updateName(true)
-    }
+  // function toggleFun(){
+  //   if(name === true){
+  //     return updateName(false)
+  //   } if(name === false){
+  //     return updateName(true)
+  //   }
     
-  }
+  // }
   // function changeFrt(){
   //   IncreaseNUM(number + 1)
   // }
@@ -30,12 +31,18 @@ export function Addition(){
   //   )
   // }
   return (
-    <div>
-      {
-        name === true? <h1>AMAN</h1> : null
-      }
-      <button onClick={toggleFun}>click to hide</button>
-    </div>
+    // <div>
+
+
+    //   {/* {
+    //     name === true? <h1>AMAN</h1> : null
+    //   }
+    //   <button onClick={toggleFun}>click to hide</button> */}
+      
+
+
+    // </div>
+    <MyName name="Aman"/>
   )
 }
 
