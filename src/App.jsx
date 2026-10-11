@@ -2,10 +2,10 @@ import { useState } from "react"
 
 export function Addition(){
   
-  const [fruit, changeFruit] = useState("Apple")
+  const [number, IncreaseNUM] = useState(1)
 
   function changeFrt(){
-    changeFruit("Banana")
+    IncreaseNUM(number + 1)
   }
   // function alertFun(fruit){
   //   return alert(fruit)
@@ -23,8 +23,9 @@ export function Addition(){
   // }
   return (
     <div>
-      <h1>{fruit}</h1>
-      <button onClick={changeFrt}>Click to change fruit</button>
+      <h1>Click counter</h1>
+      <h1>{number}</h1>
+      <button onClick={changeFrt}>Click here</button>
     </div>
   )
 }
