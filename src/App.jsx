@@ -2,11 +2,19 @@ import { useState } from "react"
 
 export function Addition(){
   
-  const [number, IncreaseNUM] = useState(1)
+  const [name , updateName] = useState(true)
 
-  function changeFrt(){
-    IncreaseNUM(number + 1)
+  function toggleFun(){
+    if(name === true){
+      return updateName(false)
+    } if(name === false){
+      return updateName(true)
+    }
+    
   }
+  // function changeFrt(){
+  //   IncreaseNUM(number + 1)
+  // }
   // function alertFun(fruit){
   //   return alert(fruit)
   // }
@@ -23,9 +31,10 @@ export function Addition(){
   // }
   return (
     <div>
-      <h1>Click counter</h1>
-      <h1>{number}</h1>
-      <button onClick={changeFrt}>Click here</button>
+      {
+        name === true? <h1>AMAN</h1> : null
+      }
+      <button onClick={toggleFun}>click to hide</button>
     </div>
   )
 }
