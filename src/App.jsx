@@ -3,7 +3,7 @@ import { MyName } from "./Header"
 
 export function Addition(){
   console.log("test")
-
+  const [showStudents, setShowStudents] = useState(false);
   const Class = ["Aman", "Ansh", "Pawan", "Aryan", "Satyam", "Rohit", "Priyanshu", "Krishna"]
   // const School = {
   //   class : 36,
@@ -49,7 +49,14 @@ export function Addition(){
 
 
     // </div>
-    <MyName Class={Class}/>
+     <div>
+      <button onClick={() => setShowStudents(true)}>
+        Click to see students
+      </button>
+
+      {showStudents && <MyName Class={Class} />}
+    </div>
+    
   )
 }
 
