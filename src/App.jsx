@@ -4,11 +4,12 @@ import { MyName } from "./Header"
 export function Addition(){
   console.log("test")
 
-  const School = {
-    class : 36,
-    teachers : "Twenty",
-    Students : "Thousand"
-  }
+  const Class = ["Aman", "Ansh", "Pawan", "Aryan", "Satyam", "Rohit", "Priyanshu", "Krishna"]
+  // const School = {
+  //   class : 36,
+  //   teachers : "Twenty",
+  //   Students : "Thousand"
+  // }
   // const [name , updateName] = useState(true)
 
   // function toggleFun(){
@@ -48,7 +49,7 @@ export function Addition(){
 
 
     // </div>
-    <MyName School={School}/>
+    <MyName Class={Class}/>
   )
 }
 
