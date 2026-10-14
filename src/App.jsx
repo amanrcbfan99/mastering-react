@@ -7,6 +7,7 @@ export function Addition(){
 
   const [showStudents, setShowStudents] = useState(false);
   const [newStudent, setNewStudent] = useState("");
+
   const [Class, setClass] = useState([
     "Aman", "Ansh", "Pawan", "Aryan",
     "Satyam", "Rohit", "Priyanshu", "Krishna"
@@ -25,6 +26,7 @@ export function Addition(){
   //   } if(name === false){
   //     return updateName(true)
   //   }
+  //
   // }
   // function changeFrt(){
   //   IncreaseNUM(number + 1)
@@ -45,9 +47,13 @@ export function Addition(){
 
   function addStudent(){
     if(newStudent.trim() !== ""){
-      setClass([...Class, newStudent]);
+      setClass([...Class, newStudent.trim()]);
       setNewStudent("");
     }
+  }
+
+  function removeStudent(index){
+    setClass(Class.filter((student, i) => i !== index));
   }
 
   return (
@@ -61,7 +67,9 @@ export function Addition(){
         onChange={(e) => setNewStudent(e.target.value)}
       />
 
-      <button onClick={addStudent}>Add Student</button>
+      <button onClick={addStudent}>
+        Add Student
+      </button>
 
       <h3>Total Students: {Class.length}</h3>
 
@@ -69,7 +77,17 @@ export function Addition(){
         {showStudents ? "Hide Students" : "Show Students"}
       </button>
 
-      {showStudents && <MyName Class={Class} />}
+      {showStudents && (
+        <MyName
+          Class={Class}
+          removeStudent={removeStudent}
+        />
+      )}
+
+      {/* {
+        name === true ? <h1>AMAN</h1> : null
+      }
+      <button onClick={toggleFun}>click to hide</button> */}
     </div>
   )
 }
